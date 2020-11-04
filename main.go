@@ -120,20 +120,6 @@ func main(){
 	n4 := TNode{4, 6}
 	n5 := TNode{5, 5}
 
-	//Heap Test
-	// fmt.Println("Min Heapify")
-	// heap := PriorityQueue{}
-	// sample := []TNode{n1, n2, n3, n4, n5}
-	// heap.arr = append(heap.arr, sample...)
-	// heap.Insert(TNode{2, 10})
-	// fmt.Println("heap %v", heap)
-	// fmt.Println("min %d", heap.ExtractMin())
-	// fmt.Println("heap %v", heap)
-	// fmt.Println("min %d", heap.ExtractMin())
-	// fmt.Println("heap %v", heap)
-	// fmt.Println("min %d", heap.ExtractMin())
-	// fmt.Println("heap %v", heap)
-
 
 	tree := Tree{}
 	tree.nodes = make(map[int][]TNode)
