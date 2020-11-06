@@ -2,6 +2,7 @@ package main
 
 import (
 	"testing"
+	// "fmt"
 )
 
 func TestHeap(t *testing.T){
@@ -26,16 +27,19 @@ func TestHeap(t *testing.T){
 	// fmt.Println("heap", heap)
 
 	min1 := heap.ExtractMin()
+	// // fmt.Println("heap", heap)
 	if min1.w != 1 {
 		t.Errorf("min1 = %d; want 1", int(min1.w))
 	}
 
 	min2 := heap.ExtractMin()
+	// fmt.Println("heap", heap)
 	if min2.w != 2 {
 		t.Errorf("min2 = %d; want 2", int(min2.w))
 	}
 
 	min3 := heap.ExtractMin()
+	// fmt.Println("heap", heap)
 	if min3.w != 5 {
 		t.Errorf("min3 = %d; want 5", int(min3.w))
 	}

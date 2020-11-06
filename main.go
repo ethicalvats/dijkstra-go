@@ -58,17 +58,21 @@ func (t *Tree) Dijkstra(size int) {
 		//STEP: U <- EXTRACT_MIN(Q)
 		u := pq.ExtractMin()
 
-		//STEP: S <- S u {U}
-		visit[u.v] = true
+		// if node is not visited before
+		if !visit[u.v] {
 
-		//STEP: foreach verter adj to s
-		for _, n := range t.nodes[u.v] {
-			
-			//STEP: Relax(u, v, w)
-			dv := t.Relax(u.v, n.v, n.w)
+			//STEP: S <- S u {U}
+			visit[u.v] = true
 
-			t.d[n.v] = dv
-			t.queue.Update(n.v, dv)
+			//STEP: foreach verter adj to s
+			for _, n := range t.nodes[u.v] {
+				
+				//STEP: Relax(u, v, w)
+				dv := t.Relax(u.v, n.v, n.w)
+
+				t.d[n.v] = dv
+				t.queue.Update(n.v, dv)
+			}
 		}
 
 	}
